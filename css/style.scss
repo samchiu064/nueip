@@ -1,0 +1,143 @@
+:root {
+  --blue: #0093D6;
+  --yellow: #F6B300;
+  --green: #1EA939;
+  --red: #E40012;
+  --yellow-highlight: rgba(246, 179, 0, 0.7);
+  --yellow-hover: #dda100;
+  --green-hover: #1b9833;
+  --gray: #6C757D;
+  --gray-bg: #F5F5F5;
+  --light-gray: #FAFAFA;
+  --black: #646464;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.bg {
+  &--gray {
+    background-color: var(--gray-bg);
+  }
+  &--green{
+    background-color: var(--green);
+  }
+  &--red {
+    background-color: var(--red);
+  }
+  &--yellow {
+    background-color: var(--yellow);
+  }
+}
+
+.td--highlight {
+  background-color: var(--yellow-highlight) !important;
+}
+
+.asterisk {
+  &::before {
+    content: '*';
+    color: var(--red);
+  }
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  padding: 1rem;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 0;
+  &__head {
+    color: white;
+    font-size: 1.25rem;
+    th {
+      white-space: nowrap;
+      background-color: var(--blue);
+      &:first-child {
+        border-top-left-radius: 0.625rem;
+      }
+      &:last-child {
+        border-top-right-radius: 0.625rem;
+      }
+    }
+  }
+  &__body {
+    tr {
+      white-space: nowrap;
+      &:last-child {
+        td {
+          border-bottom-width: 0px;
+        }
+      } 
+      td:first-child, td:nth-child(2) {
+        cursor: pointer;
+      }
+    }
+  }
+  &--theme-hrm {
+    text-align: center;
+    background-color: white;
+    border-radius: 0.625rem;
+  }
+} 
+
+.btn {
+  &--edit {
+    color: white;
+    background-color: var(--yellow);
+    &:active, &:focus {
+      color: white;
+      background-color: var(--yellow);
+      border: 1px solid var(--yellow);
+    }
+    &:hover {
+      color: white;
+      background-color: var(--yellow-hover);
+    }
+  }
+  &--edit-outline {
+    color: var(--yellow);
+    border: 1px solid var(--yellow);
+    &:active, &:focus {
+      color: var(--yellow);
+      border: 1px solid var(--yellow);
+    }
+    &:hover {
+      color: white;
+      background-color: var(--yellow);
+    }
+  }
+  &--delete {
+    color: var(--red);
+    border: 1px solid var(--red);
+    &:active, &:focus {
+      color: var(--red);
+      border: 1px solid var(--red);
+    }
+    &:hover {
+      color: white;
+      background-color: var(--red);
+    }
+  }
+  &--phone {
+    border: 0px;
+    &:hover {
+      color: white;
+    }
+  }
+  &--add {
+    color: white;
+    background-color: var(--green);
+    &:hover {
+      background-color: var(--green-hover);
+      border-color: var(--green-hover);
+      color: white;
+    }
+    &:active, &:focus {
+      color: white;
+      background-color: var(--green);
+    }
+  }
+}

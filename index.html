@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Hello World" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=K-bNxv4ItCboNXjltUzcHXOV3wqUVIl45wPMUDy67zD_e0oEDbbCgSkL-r0y1uhId5Iddb82r8EXhdkaAyps3MJ3inrRXsDXYDAKUI71HJV-HcSWlBwz2-jBZYAv5irUIwY8lHjRPZMTiKLRaiPofMQ8_k_yvlo87cRv4XB-085kbU67prdqkoBXb4i-nocXq-4LYsWBY2aVQeF-HBzxY-1m3yYAg98NTHrXlPlMVLO5Tvp0nvS2LMZPI5qy8gW8LpJWRQH38xAphfh5YU0O1sl7pi-vW5acuQbqyHKqvrYicC_WHtXseziYWFu8lYSMNd4-Pt61baxAHFnmNo7rHxbhE7fR0GHDqlbyzZF9KIK_1RbZDvkY0gf2HTvidb92Qh0LjCg0oI1Lg9zNMQUU8MOLjTSkSvQcYNIjXMdU4BTYqLaVapDJp1bGS1Ee2azdgY_f4vvxjjmSk12E9LMJI8rfyKHJrcXx8gVOVLZj5lg26pCqVfpr4L8eiXqemP4nYgDhgO0u_bbfKQrU3068hEaJldohlIKYO2nKTXA_A1DvNO3pM9FFEaJmiD7XaFhSk-DFoApZl_6EFmZiVNgM8N8sXBm3SYoD2Sw3PyldxaVA61hXwb6pdPXVy8vqHX8zsinqqF5wdG9CtEJXOB61c0OuyeJrQdkVre9RhvUJiHvi8aXR5v21ENmXo82GKylHQxKnQLo6l7dXZ115nSolIURUXrWQydKNOL61aSz9aMzQR9OAAF78iRKlTB42UcVbl0m1bIgMTHGE8tSYGPnX_Miohn38-e31VUJb-Rn-e-H1Q-1Qpr5ZSR5E460ngsE-EAXoYReee9NSiZSDIuY3LrZhF9bqDxoPuL5KPGO4OdtvSU83y-PdDm0qTRhJvXpMN8N0ihsnVqzuH_XZYtDXaYndFUiluzmrhhy-CAqeJISf5IFAfXsaj_ubLahKXA2EmAS2MM0e1sPtJE66whyhBeVzxwBy_umGibAHQH-BrP2x2nL8sFclAJkN0iHUpJ9q8Umhm5n1bxC-aKtMq69-oHt-Cr_EyaGLnnPkapPq_41-60PHF-IHRgBWPuzMBfQv6ABQarq6nXyooprfR3JH7J3Hp-_6lonJMoH8COvsI_sXm-rR3UIgSxs9ZV42Ub-8zdlIkjUmQ7iJo2VxzETyWTHpGykQxSBMCHTu2iJ2bZ9q9-gqczEul4juW98KqLd19nHtWsWdcoNNSaVvjPtVZosNbVLOxlrG6gO8jydZyREacUhONypQrJAD_jcTubKsvdywwJn1hjR6dp_ZdSwQIqpLZYIybrL7wcTa2ddclyyqZ19cQ8EZDkD-ShXDiopLZcoIHy9Ci5KaYq18SZLukuxtUe7mXDK0qhRk5rKRqCjT-82mnizP_v-ze_4y9WTfY2cKuOKV95ol11BjB8bZvw"
+      nonce="1056731d13979a2a570e26a5cce6b390"
+      charset="UTF-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTFhYWU4ZDkzYzEmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxNzQwMDE5NDU5NzY4NzQ2Mjg2JnRoPTE4MjVjYTdhYzljODgxMmUmdmlldz1hdHQmZGlzcD1zYWZlJnJlYWxhdHRpZD1mX2w2Ym15ZmU5MCZzYWRkYmF0PUFOR2pkSjlOUVRWVi1ITk4wQVE2akRnajdDOXJWY2w4NHlrakNBRlZoc1JnSnNFWTZYdFNrTVlFZ0QzSzdpWXdrSXVtSjQtTlplUW9OTzNLbXg1UzJMbk1KWEFQbEo5RmV4XzJJaTNEZEd1bTNhTTItUXVGWEpkbEp6QjRSSm9ESkFLYW9WMHVORjlJNUdObmRrd1ZLeVNDcFFMTkl4S0lxdHZEUVE5dWJDZGxySy0zb0lVS29ub1MwZEpWeV9OMjdUa1ZlNm5BRHhmSHNFc1RqZDVnc01oemZDMU5Zd3doTGdoZWNIU3hqeGsyRzE1LWd2bUlNdTl0UWpvZ3lkOE5EaUVkRV9Zc2stbHJYN2JrVEhBQVI1Wk5PV1Eza01fMlo0NWRrYWVwdUdlVnlRdlVESXF1YUg5RURrbmVNc0F1VWlual96NWFtcUZlajk3LWFSOEs0dkRPQmFkRG9hbDBfTW0wLV9XOHBMaXo4Ny1jd3gtM29aYTFjWU5ILXFZUERfaFd1R3VaWUo2VEk2S0RFblprek02dnNnLTNRU1JlYmgxUTVodEhEM3RHU2J5M2JsYUlwOGo5cXZLTkdrS1liR1h3eWd0bEtQc0pTS1daYW5NZnhtRHdCNktzeU8yVldncDBmaDA4Rk41WVFYUUFyY2h1UnlBX2pfNlRmanpHZnZrY3hpZGtKY3FiYVFyV1BWTXpCV0FVWWNUWHRVb3gzcjlTWTBvUkRmbzJuek5uZGQ3QTd1eGZ5ZzlZZDlKeU1nbFBNQ0xfUURRWXFkX09oblRwZWhCOTI4TVFVVF9TeVFfbFA3dllHTzZxQTBweWJ6NFJfX0VTb2hzbC1idVNEbGZjamRURTlLeGljaGtOUVp3RllZaW9WRm1nQWNOZEhZR3c2VTA3OGgzUHN3WVJpQ2pPM1BKNHYyWWprUmpjWVNtNG1HNzY4ZHp3d1FfOG5ZanRIN0l6c1YzTnRVWG5jenUtQVZ5TDkyY3pFelVOVHM5czR1SWZFNG5WYkRVNGFhdzk2T1llVVR6SDBBbFh1c3J3ai1SYWY2SlpCWEZrcGpSaG1VTU1kai16QlNZMFowWEhqTVY1WnBSaDQ5RnBPdW1wSTd4R3lLa0owYjQyZjFWbQ"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>個人資料表</title>
+  </head>
+
+  <body>
+    <main class="container mt-5 pb-4 px-4 bg--gray">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-4">個人資料表</h1>
+          <div class="text-end mb-2">
+            <button
+              class="btn btn-outline-secondary me-2"
+              id="modal-button--search"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+              <span class="align-middle" id="modal-button--search">搜尋</span>
+            </button>
+            <button class="btn btn--add" id="modal-button--add">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-plus-lg"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"
+                /></svg
+              ><span class="align-middle"> 新增使用者</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table table-striped table--theme-hrm" id="cardtable">
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <colgroup></colgroup>
+              <thead class="table__head">
+                <tr>
+                  <th>中文姓名</th>
+                  <th>英文姓名</th>
+                  <th>性別</th>
+                  <th>手機</th>
+                  <th>電子信箱</th>
+                  <th>修改</th>
+                  <th>刪除</th>
+                </tr>
+              </thead>
+              <tbody class="table__body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Delete Modal -->
+    <div class="modal" tabindex="-1" id="modal-delete">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="rounded me-2 p-2 bg--red"></span>
+            <h5 class="modal-title">確認刪除</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>您確定要刪除這筆資料嗎？（刪除之後將無法恢復）</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              返回
+            </button>
+            <button type="button" class="btn btn-danger" id="deleteButton">
+              確認刪除
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Modal -->
+    <div
+      class="modal fade"
+      id="modal-add"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="addModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="rounded me-2 p-2 bg--green"></span>
+            <h5 class="modal-title" id="addModalLabel">新增資料</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-4 needs-validation" id="addForm" novalidate>
+              <div class="col-12">
+                <label for="addChineseName" class="form-label"
+                  >中文姓名<i class="asterisk"></i
+                ></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="例如：王小明"
+                  id="addChineseName"
+                  required
+                />
+                <div class="invalid-feedback">此欄位為必填</div>
+              </div>
+              <div class="col-12">
+                <label for="addEngName" class="form-label">英文姓名</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="非必填選項"
+                  id="addEngName"
+                />
+              </div>
+              <div class="col-12">
+                <label for="gender" class="form-label d-block"
+                  >性別<i class="asterisk"></i
+                ></label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genderOptions"
+                    id="addMale"
+                    value="required"
+                  />
+                  <label class="form-check-label" for="addMale">男</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genderOptions"
+                    id="addFemale"
+                    value="required"
+                  />
+                  <label class="form-check-label" for="addFemale">女</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="addTel" class="form-label"
+                  >手機<i class="asterisk"></i
+                ></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ex: 0912345678"
+                  id="addTel"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <div class="invalid-feedback">請輸入 10 碼數字</div>
+              </div>
+              <div class="mb-3">
+                <label for="addEmail" class="form-label"
+                  >電子信箱<i class="asterisk"></i
+                ></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="addEmail"
+                  placeholder="youremail@email.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  此欄位為必填，請填寫正確的 Email 格式
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary me-auto"
+              id="addClearButton"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-eraser"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"
+                />
+              </svg>
+              清除重填
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              返回
+            </button>
+            <button
+              type="submit"
+              class="btn btn--add"
+              form="addForm"
+              id="addButton"
+            >
+              新增資料
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div
+      class="modal fade"
+      id="modal-edit"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="rounded me-2 p-2 bg--yellow"></span>
+            <h5 class="modal-title" id="editModalLabel">修改資料</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-4 needs-validation" id="editForm" novalidate>
+              <div class="col-12">
+                <label for="editChineseName" class="form-label"
+                  >中文姓名<i class="asterisk"></i
+                ></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="例如：王小明"
+                  id="editChineseName"
+                  required
+                />
+                <div class="invalid-feedback">此欄位為必填</div>
+              </div>
+              <div class="col-12">
+                <label for="editEngName" class="form-label">英文姓名</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="非必填選項"
+                  id="editEngName"
+                />
+              </div>
+              <div class="col-12">
+                <label for="gender" class="form-label d-block"
+                  >性別<i class="asterisk"></i
+                ></label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genderOptions"
+                    id="editMale"
+                    value="required"
+                  />
+                  <label class="form-check-label" for="editMale">男</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="genderOptions"
+                    id="editFemale"
+                    value="required"
+                  />
+                  <label class="form-check-label" for="editFemale">女</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="editTel" class="form-label"
+                  >手機<i class="asterisk"></i
+                ></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Ex: 0912345678"
+                  id="editTel"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <div class="invalid-feedback">請輸入 10 碼數字</div>
+              </div>
+              <div class="mb-3">
+                <label for="editEmail" class="form-label"
+                  >電子信箱<i class="asterisk"></i
+                ></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="editEmail"
+                  placeholder="youremail@email.com"
+                  required
+                />
+                <div class="invalid-feedback">
+                  此欄位為必填，請填寫正確的 Email 格式
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary me-auto">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-eraser"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"
+                />
+              </svg>
+              <span class="align-middle" id="editClearButton">清除重填</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              返回
+            </button>
+            <button
+              type="submit"
+              class="btn btn--edit"
+              form="editForm"
+              id="editButton"
+            >
+              修改資料
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="modal-search"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">搜尋資料</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-4 needs-validation" id="searchForm" novalidate>
+              <div class="col-12">
+                <label for="searchChineseName" class="form-label"
+                  >中文姓名</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="searchChineseName"
+                />
+              </div>
+              <div class="col-12">
+                <label for="searchEngName" class="form-label">英文姓名</label>
+                <input type="text" class="form-control" id="searchEngName" />
+              </div>
+              <div class="col-12">
+                <label for="gender" class="form-label d-block">性別</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio"
+                  name="genderOptions" id="searchMale" value= />
+                  <label class="form-check-label" for="searchMale">男</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio"
+                  name="genderOptions" id="searchFemale" value= />
+                  <label class="form-check-label" for="searchFemale">女</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary me-auto"
+              id="searchClearButton"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-eraser"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"
+                />
+              </svg>
+              <span class="align-middle">清除重填</span>
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              返回
+            </button>
+            <button
+              type="submit"
+              class="btn btn-outline-dark"
+              form="searchForm"
+              id="searchButton"
+            >
+              搜尋資料
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
